@@ -3,7 +3,7 @@ import Youtube from "../assets/youtube.png";
 import Instagram from "../assets/instagram.png";
 import X from "../assets/x.png";
 import Logo from "../assets/logo.png";
-import Form from "../components/Form.jsx";
+import Form from "../components/Form";
 
 const Join = () => {
   return (
