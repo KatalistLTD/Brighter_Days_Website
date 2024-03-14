@@ -39,5 +39,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: c;
+  justify-content: center;
+  border-radius: 20px;
 }
