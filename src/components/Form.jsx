@@ -3,6 +3,7 @@ import Email from "emailjs-com"; // Import Email.js library
 import ImageEmail from "../assets/email.png";
 import ImageCall from "../assets/call.png";
 import ImageLocation from "../assets/location.png";
+import "./style.css";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -55,78 +56,80 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="email-container">
-      <div className="input-box">
-        <div className="input-field field">
-          <input
-            type="text"
-            name="fname"
-            placeholder="First Name"
-            value={formData.fname}
-            onChange={handleChange}
-          />
+    <div className="right-j">
+      <form onSubmit={handleSubmit} className="email-container">
+        <div className="input-box">
           <div className="input-field field">
             <input
               type="text"
-              name="lname"
-              placeholder="Last Name"
-              value={formData.lname}
+              name="fname"
+              placeholder="First Name"
+              value={formData.fname}
+              onChange={handleChange}
+            />
+            <div className="input-field field">
+              <input
+                type="text"
+                name="lname"
+                placeholder="Last Name"
+                value={formData.lname}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="input-box">
+          <div className="input-field field">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-field field">
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone"
+              value={formData.phone}
               onChange={handleChange}
             />
           </div>
         </div>
-      </div>
 
-      <div className="input-box">
-        <div className="input-field field">
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
+        <div className="textarea-field field">
+          <textarea
+            name="message"
+            placeholder="Message"
+            value={formData.message}
             onChange={handleChange}
           />
         </div>
-        <div className="input-field field">
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
+
+        <button type="submit" className="btn btn-j">
+          Join Now
+        </button>
+
+        <div className="contact-details">
+          <span>
+            <img src={ImageLocation} alt="" />
+            along Ngong - Langata link road
+          </span>
+          <span>
+            <img src={ImageEmail} alt="" />
+            info@brighterdays.co.ke
+          </span>
+
+          <span>
+            <img src={ImageCall} alt="" />
+            0724916981
+          </span>
         </div>
-      </div>
-
-      <div className="textarea-field field">
-        <textarea
-          name="message"
-          placeholder="Message"
-          value={formData.message}
-          onChange={handleChange}
-        />
-      </div>
-
-      <button type="submit" className="btn btn-j">
-        Join Now
-      </button>
-
-      <div className="contact-details">
-        <span>
-          <img src={ImageLocation} alt="" />
-          along Ngong - Langata link road
-        </span>
-        <span>
-          <img src={ImageEmail} alt="" />
-          info@brighterdays.co.ke
-        </span>
-
-        <span>
-          <img src={ImageCall} alt="" />
-          0724916981
-        </span>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 

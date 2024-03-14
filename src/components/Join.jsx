@@ -33,9 +33,7 @@ const Join = () => {
       </div>
 
       {/* right side */}
-      <div className="right-j">
-        <Form />
-      </div>
+      <Form />
     </div>
   );
 };
