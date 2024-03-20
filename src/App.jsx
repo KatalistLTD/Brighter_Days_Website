@@ -1,10 +1,8 @@
 import Hero from "./components/Hero";
-// import Join from "./components/Join";
-import Plan from "./components/Plan";
-import Programs from "./components/Programs";
-import Reasons from "./components/Reasons";
 import "./App.css";
 import Form from "./components/Form";
+import AboutUs from "./components/AboutUs";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -12,11 +10,9 @@ function App() {
       {" "}
       <div className="App">
         <Hero />
-        <Programs />
-        <Reasons />
-        <Plan />
+        <AboutUs />
+        <Services />
         <Form />
-        {/* <Join /> */}
       </div>
     </>
   );

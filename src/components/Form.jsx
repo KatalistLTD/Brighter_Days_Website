@@ -56,7 +56,7 @@ function Form() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="container">
         <div className="left-c">
           <div className="contact-heading">
@@ -66,14 +66,14 @@ function Form() {
             </div>
 
             <div>
-              <span>YOUR BODY </span>
-              <span className="stroke-text">WITH US?</span>
+              <span>WITH </span>
+              <span className="stroke-text">US?</span>
             </div>
 
             <div className="contact-details">
               <span>
                 <img src={ImageLocation} alt="" />
-                along Ngong - Langata link road
+                Ngong Road - Langata Road link road
               </span>
               <span>
                 <img src={ImageEmail} alt="" />
@@ -145,7 +145,7 @@ function Form() {
             </div>
           </form>
         </div>
-        <div className="right-c"></div>
+        <div className="blur blur-contact"></div>
       </div>
     </div>
   );

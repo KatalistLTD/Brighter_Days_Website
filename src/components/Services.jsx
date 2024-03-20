@@ -2,13 +2,15 @@ import "./style.css";
 import { programsData } from "../data/programsData";
 import RightArrow from "../assets/rightArrow.png";
 
-const Programs = () => {
+const Services = () => {
   return (
     <div className="Programs" id="programs">
+      {/* blur */}
+
       {/* header */}
       <div className="programs-header">
         <span className="stroke-text">Explore our</span>
-        <span>Programs</span>
+        <span>Services</span>
         <span className="stroke-text">to shape you</span>
       </div>
       {/* program categories */}
@@ -29,4 +31,4 @@ const Programs = () => {
   );
 };
 
-export default Programs;
+export default Services;

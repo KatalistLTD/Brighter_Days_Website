@@ -5,9 +5,9 @@ import image3 from "../assets/image3.jpeg";
 import image4 from "../assets/image4.jpeg";
 import Logo from "../assets/logo.png";
 import tick from "../assets/tick.png";
-const Reasons = () => {
+const AboutUs = () => {
   return (
-    <div className="Reasons" id="reasons">
+    <div className="Reasons" id="about">
       {/* left side */}
       <div className="left-r">
         {/* images */}
@@ -62,4 +62,4 @@ const Reasons = () => {
   );
 };
 
-export default Reasons;
+export default AboutUs;

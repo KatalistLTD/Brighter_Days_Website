@@ -3,9 +3,14 @@ import Header from "./Header";
 import hero_image from "../assets/hero_image.png";
 import hero_image_back from "../assets/hero_image_back.png";
 
+import { motion } from "framer-motion";
 const Hero = () => {
+  const transition = { type: "spring", duration: 3 };
+  const mobile = window.innerWidth <= 760 ? true : false;
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
+      {/* blur */}
+      <div className="blur blur-hero"></div>
       {/* left hero section */}
       <div className="left-h">
         {/* header */}
@@ -13,7 +18,11 @@ const Hero = () => {
 
         {/* the best ad */}
         <div className="the-best-ad">
-          <div></div>
+          <motion.div
+            initial={{ left: mobile ? "100px" : "120px" }}
+            whileInView={{ left: "9px" }}
+            transition={{ ...transition, type: "tween" }}
+          ></motion.div>
           <span>PROFESSIONAL TRAINING</span>
         </div>
 
@@ -42,11 +51,18 @@ const Hero = () => {
 
       {/* right side */}
       <div className="right-h">
-        <button className="btn">Join Now</button>
+        <button className="btn btn-h">Join Now</button>
 
         {/* hero image */}
         <img src={hero_image} alt="" className="hero-image" />
-        <img src={hero_image_back} alt="" className="hero-image-back" />
+        <motion.img
+          initial={{ right: "11rem" }}
+          whileInView={{ right: "20rem" }}
+          transition={transition}
+          src={hero_image_back}
+          alt=""
+          className="hero-image-back"
+        />
       </div>
     </div>
   );
